@@ -10,6 +10,7 @@ This catalog summarizes the public BlazingSystems portfolio and its validation s
 | [BlazingSystems-Labs](https://github.com/BlazingSystems/BlazingSystems-Labs) | Active development requiring additional validation |
 | [BlazingSystems-Experiments](https://github.com/BlazingSystems/BlazingSystems-Experiments) | Feasibility studies, compatibility work and prototypes |
 | [BlazingSystems-Archives](https://github.com/BlazingSystems/BlazingSystems-Archives) | Sanitized historical notes, superseded concepts and recovery plans |
+| [Forked-Projects](https://github.com/BlazingSystems/Forked-Projects) | Attribution-preserving studies of third-party/open-source work |
 
 ## Validation Levels
 
@@ -116,6 +117,28 @@ Shared browser-session coordinator and NAPT-repeater experiment using a user-sup
 
 ## Experiments
 
+### BlazePwifi
+**Area:** OpenWrt / ESP8266 captive portal  
+**Status:** Experimental alpha  
+**Repository:** `BlazingSystems-Experiments/experiment/openwrt/BlazePwifi/`
+
+Clean-room reconstruction of a PisoWiFi-style OpenWrt architecture with captive access control, accounting/session logic, installer/uninstaller paths, a documented ESP8266 vendo protocol and hardware validation boundaries. It does not redistribute the analyzed commercial firmware.
+
+### EasyMode for OpenWrt
+**Area:** OpenWrt management layer  
+**Status:** 5.0.0-alpha.1 / static tested  
+**Repository:** `BlazingSystems-Experiments/experiment/openwrt/easymode-project/`
+
+Adaptive management/tooling project with Cellular, AP, Router, Switch, PC and Generic editions plus offline-HTML, Windows and OpenWrt installer families. Hardware verification remains required before broader promotion.
+
+### ESPHole — Versioned Experimental Branch
+**Area:** ESP8266 networking  
+**Status:** Experimental version history  
+**Repository:** `BlazingSystems-Experiments/embedded/esphole/`
+
+Preserved numbered firmware iterations used for active ESP8266 DNS/NAPT development and regression work. The safer public Lab edition remains the deployment-oriented reference while the experiment branch preserves development history.
+
+
 ### BlazeAPK
 **Current public build:** Beta 0.6
 
@@ -172,3 +195,8 @@ Public project pages should contain:
 7. no confidential records, credentials or proprietary operational templates.
 
 The portfolio is maintained as a technical engineering record rather than a raw development backup.
+
+
+## Forked / Upstream Studies
+
+Third-party/open-source experiments belong in **Forked-Projects** and must retain upstream attribution and licensing. Forked work is kept separate from original BlazingSystems portfolio projects so authorship remains unambiguous.

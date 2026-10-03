@@ -3,74 +3,83 @@
 # BlazingSystems
 
 ### Loumer Manreal
-**Computer Technician · Embedded Systems Builder · Network & Offline-Tool Developer**
 
-Practical engineering projects focused on embedded systems, local-first software, networking, repairability, and efficient use of modest hardware.
+**Computer Technician · Embedded Systems Builder · Networking & Offline-Tool Developer**
+
+Practical engineering focused on microcontrollers, OpenWrt, local-first software, diagnostics, repairability, and useful systems that run well on modest hardware.
+
+[Projects](https://github.com/BlazingSystems/BlazingSystems-Projects) ·
+[Labs](https://github.com/BlazingSystems/BlazingSystems-Labs) ·
+[Experiments](https://github.com/BlazingSystems/BlazingSystems-Experiments) ·
+[Archives](https://github.com/BlazingSystems/BlazingSystems-Archives) ·
+[Forked Projects](https://github.com/BlazingSystems/Forked-Projects)
 
 </div>
 
 ---
 
-## Profile
+## Engineering Portfolio
 
-I build and study systems that solve practical problems with straightforward hardware and software. My work commonly combines microcontrollers, local web interfaces, networking, offline browser applications, and repurposed computers.
+BlazingSystems is a working portfolio of practical hardware and software projects. The focus is not on collecting demos for their own sake, but on learning how complete systems behave: setup, persistence, failure recovery, networking, hardware limits, maintainability, and real-world validation.
 
-The portfolio emphasizes projects that are understandable, maintainable, and realistic about their validation limits.
-
-## Portfolio Areas
-
-| Area | Focus |
+| Focus | Typical work |
 |---|---|
-| Embedded systems | ESP8266 / ESP32 controllers, sensors, relays, local device interfaces |
-| Networking | OpenWrt, VLANs, captive-portal studies, local network infrastructure |
-| Offline web tools | Single-file and local-first browser applications |
-| Android / desktop utilities | Lightweight tools designed for practical use on modest hardware |
-| Homelab systems | Repurposed PCs, local services, storage, routing and self-hosting |
-| Training & simulation | Browser-based technical exercises and lightweight games |
+| **Embedded systems** | ESP8266 / ESP32 controllers, sensors, relays, local web interfaces |
+| **Networking** | OpenWrt, VLANs, captive portals, repeaters, DNS/NAPT experiments |
+| **Offline-first software** | Single-file HTML tools, browser utilities, local persistence |
+| **Android / desktop tools** | Lightweight utilities for practical use on modest hardware |
+| **Homelab / self-hosting** | Repurposed PCs, routing, storage and local services |
+| **Training / simulation** | Browser-based technical trainers and small strategy games |
 
-## Repository Structure
+## Portfolio Map
 
-- **[Projects](https://github.com/BlazingSystems/BlazingSystems-Projects)** — portfolio-ready demonstrations and usable builds
-- **[Labs](https://github.com/BlazingSystems/BlazingSystems-Labs)** — active development requiring further build, hardware or platform validation
-- **[Experiments](https://github.com/BlazingSystems/BlazingSystems-Experiments)** — feasibility studies and compatibility prototypes
-- **[Archives](https://github.com/BlazingSystems/BlazingSystems-Archives)** — sanitized engineering history and resolution notes
+| Repository | Role | Typical status |
+|---|---|---|
+| **[BlazingSystems-Projects](https://github.com/BlazingSystems/BlazingSystems-Projects)** | Curated public portfolio | Working / demonstration / source-ready |
+| **[BlazingSystems-Labs](https://github.com/BlazingSystems/BlazingSystems-Labs)** | Active engineering work | Hardware or platform validation pending |
+| **[BlazingSystems-Experiments](https://github.com/BlazingSystems/BlazingSystems-Experiments)** | Research and feasibility work | Alpha / prototype / experimental |
+| **[BlazingSystems-Archives](https://github.com/BlazingSystems/BlazingSystems-Archives)** | Sanitized engineering history | Archived / resolution record |
+| **[Forked-Projects](https://github.com/BlazingSystems/Forked-Projects)** | Third-party fork studies | Attribution-preserving research |
 
-A detailed project catalog is available in **[PROJECTS.md](PROJECTS.md)**. Validation boundaries and remaining test requirements are tracked in **[PORTFOLIO_VALIDATION.md](PORTFOLIO_VALIDATION.md)**.
+The full project ledger is in **[PROJECTS.md](PROJECTS.md)**. Validation boundaries are tracked in **[PORTFOLIO_VALIDATION.md](PORTFOLIO_VALIDATION.md)**.
 
-## Engineering Approach
+## Current Highlights
+
+- **BlazePwifi** — clean-room OpenWrt + ESP8266 captive-portal / vending architecture under active experimental validation.
+- **EasyMode for OpenWrt** — adaptive OpenWrt management layer with multiple hardware editions and installer families.
+- **Blaze Pisonet** — ESP8266 timer and multi-unit control studies with local configuration and persistence.
+- **ESPHole** — lightweight ESP8266 DNS-filtering / repeater research with a sanitized Lab edition and preserved experimental version history.
+- **Marine browser tools** — generic offline logbook, reporting, and draft-reading demonstrations using synthetic data.
+- **BlazeFM / MachDownload** — lightweight Android and desktop utility projects still moving through platform validation.
+
+## Engineering Method
 
 ```text
-Define the problem
-      ↓
-Build the smallest useful prototype
-      ↓
-Test the failure cases
-      ↓
-Measure and simplify
-      ↓
-Document limitations
-      ↓
-Validate on the target environment
-      ↓
-Release or keep in Labs
+Build  →  Test  →  Audit  →  Improve
+          ↓
+   document limits
+          ↓
+ validate on target
 ```
 
-A successful compile is only one validation step. Hardware behavior, persistence, failure recovery, network conditions, and user workflow matter just as much.
+A successful compile is only one checkpoint. Hardware behavior, recovery paths, persistence, network conditions, resource limits, and user workflow are treated as separate validation problems.
 
 ## Technical Stack
 
-`ESP8266` · `ESP32` · `Arduino/C++` · `OpenWrt` · `Linux` · `HTML` · `CSS` · `JavaScript` · `Python` · `Android` · `Networking` · `Wi-Fi` · `VLAN` · `Embedded Web Interfaces`
+`ESP8266` · `ESP32` · `Arduino/C++` · `OpenWrt` · `Linux` · `HTML` · `CSS` · `JavaScript` · `Python` · `Android` · `Wi-Fi` · `VLAN` · `DNS` · `NAPT`
 
-## Public Portfolio Policy
+## Public Portfolio Standard
 
-Public repositories use generic interfaces and synthetic sample data. They intentionally exclude client records, employer records, production credentials, private router backups, personal financial data, private keys, and other confidential operational material.
+Public repositories use generic interfaces and synthetic examples. They intentionally exclude employer/client records, production credentials, private keys, raw router backups, personal records, commercial ROM/APK payloads, and proprietary operational datasets.
 
-Hardware, networking, and calculation projects are clearly labeled when further real-world validation is still required.
+Projects are labeled by what has actually been tested. Hardware-dependent work stays in Labs or Experiments until target-device validation supports promotion.
 
 ---
 
 <div align="center">
 
-**Build · Test · Validate · Document · Improve**
+**Build · Test · Audit · Improve**
+
+<sub>Practical engineering, documented honestly.</sub>
 
 </div>
