@@ -1,0 +1,27 @@
+name: Build Logo V2 Branding Package
+on:
+  push:
+    paths:
+      - 'branding/Logo-V2/**'
+      - '.github/workflows/logo-v2-brand-kit.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install renderer
+        run: python -m pip install cairosvg reportlab
+      - name: Render PNG, PDF and ZIP
+        run: python branding/Logo-V2/scripts/build.py
+      - name: Upload branding package
+        uses: actions/upload-artifact@v4
+        with:
+          name: Blaze-Systems-Logo-V2-Branding-Package
+          path: branding/Logo-V2/dist/
+          retention-days: 90
