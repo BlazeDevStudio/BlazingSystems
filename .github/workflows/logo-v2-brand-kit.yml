@@ -1,27 +1,48 @@
-name: Build Logo V2 Branding Package
+name: Publish faithful Logo V2 ZIP
 on:
   push:
+    branches: [main]
     paths:
-      - 'branding/Logo-V2/**'
+      - 'branding/Logo-V2/.upload-parts/**'
       - '.github/workflows/logo-v2-brand-kit.yml'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - name: Install renderer
-        run: python -m pip install cairosvg reportlab
-      - name: Render PNG, PDF and ZIP
-        run: python branding/Logo-V2/scripts/build.py
-      - name: Upload branding package
-        uses: actions/upload-artifact@v4
-        with:
-          name: Blaze-Systems-Logo-V2-Branding-Package
-          path: branding/Logo-V2/dist/
-          retention-days: 90
+      - name: Reconstruct and verify owner ZIP, without modifying contents
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, zipfile
+          folder = Path('branding/Logo-V2')
+          part_dir = folder / '.upload-parts'
+          parts = sorted(part_dir.glob('part-*.bin'))
+          assert [p.name for p in parts] == [f'part-{i:03d}.bin' for i in range(18)], 'Missing or unexpected ZIP chunk'
+          target = folder / 'Logo-V2-Branding-Package.zip'
+          with target.open('wb') as output:
+              for part in parts:
+                  output.write(part.read_bytes())
+          actual = hashlib.sha256(target.read_bytes()).hexdigest()
+          expected = '8cd0d32f8023e7d8259a268f9bdbb6c7b3dfdf55d7ba2a205fd39f800bfa22b9'
+          assert actual == expected, f'ZIP differs from approved package: {actual}'
+          with zipfile.ZipFile(target, 'r') as archive:
+              assert archive.testzip() is None, 'Corrupt ZIP entry'
+              uploaded = (folder / 'ORIGINAL' / '113704.png').read_bytes()
+              assert archive.read('Logo-V2/ORIGINAL/113704.png') == uploaded, 'Uploaded original altered'
+              assert hashlib.sha256(uploaded).hexdigest() == '56fb15d1ed4faa44af7dafc3defa5e3eb04252966df853bd96f587a7a3d9132d'
+          print('Verified 7,804,110-byte Logo V2 branding ZIP, exact original source, and checksum.')
+          PY
+      - name: Commit approved ZIP and remove staging chunks
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add branding/Logo-V2/Logo-V2-Branding-Package.zip
+          git rm -r branding/Logo-V2/.upload-parts
+          git commit -m 'assets: publish exact source Logo V2 branding ZIP (checksum verified)'
+          git push origin HEAD:main
