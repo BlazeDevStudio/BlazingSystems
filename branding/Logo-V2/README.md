@@ -1,26 +1,38 @@
-# Logo V2 — Blaze Systems Branding Package
+# Logo V2 — Blaze Systems
 
-**Brand:** Blaze Systems / BlazingSystems  
-**Title:** Logo V2  
-**Approved reference:** user-supplied blue Blaze Systems branding board (20 October 2026)
+**Owner-approved reference:** Image supplied 20 October 2026. **Do not redraw, retrace, regenerate, restyle, or alter.**
 
-![Logo V2 recreated presentation](preview/Logo-V2-overview.svg)
+## Authoritative source identification
 
-This branding package uses the same stylized flame-shaped **B** and **BLAZE / SYSTEMS** wordmark shown in the owner-approved reference. It includes editable traced SVG vectors, blue/dark/monochrome logo layouts, an app icon, three SVG mockups, brand guidelines, and a responsive single-file HTML application demo.
+- Uploaded filename: `113704.png` (**contents are JPEG, not PNG**).
+- Dimensions: **1536 × 1024 pixels**; encoded size: **234,556 bytes**.
+- SHA-256: `56fb15d1ed4faa44af7dafc3defa5e3eb04252966df853bd96f587a7a3d9132d`.
+- The original is a flattened presentation board; original layered AI/PSD/EPS master files were **not** provided.
 
-**Browse:** [Style guide](docs/BRAND_GUIDELINES.md) · [Brand preview](preview/Logo-V2-overview.svg) · [Live-use HTML sample](samples/index.html) · [Source icon](assets/vector/icon-traced.svg).
+## Information exactly recorded from the board
 
-## Included
-- `assets/vector/`: icon, horizontal, dark, stacked, black/white and app icon (editable SVG).
-- `mockups/`: concept business card, store signage and mobile splash (SVG).
-- `samples/`: standalone branded app UI and reusable design tokens.
-- `docs/`: detailed palettes, typography, layouts, restrictions and provenance.
-- `scripts/build.py`: generates raster PNG sizes, a PDF guide and a ZIP for distribution.
-- `.github/workflows/logo-v2-brand-kit.yml` (repo root): builds downloadable kit as a GitHub Actions artifact.
+| Item | Shown on the reference |
+| --- | --- |
+| Brand | BLAZE SYSTEMS |
+| Motto | SYSTEMS THAT EMPOWER A BRIGHTER TOMORROW. |
+| Three pillars | PEOPLE, TECHNOLOGY, PROGRESS |
+| Typeface | Montserrat |
+| Blaze Blue | `#0066FF` |
+| Electric Blue | `#00B0FF` |
+| Deep Blue | `#001A3D` |
+| Light Blue | `#7DD3FF` |
+| Logo layouts | Primary, horizontal, stacked, icon only |
+| Other treatments | On dark, on light, monochrome black and white |
+| App-icon sizes printed | 1024, 512, 256 and 128 px (not all available as authentic source assets) |
+| Mockups depicted | Office signage, printed card, hoodie |
 
-### Important: fidelity and original artwork
-The user supplied a **flattened image presentation**, not an illustrator/PSD master. SVG curves, gradients and text above are **reconstructed approximations**, not an exact original vector master. The original board is retained in the user-provided downloadable ZIP supplied in the ChatGPT conversation; that source PNG is **not uploaded to this repository**. No PSD/AI/EPS original is claimed. The placeholder GitHub URL and QR code inside the original presentation are not official links.
+## Critical provenance and release boundary
 
-Generate all PNG, PDF and ZIP files locally: `python -m pip install cairosvg reportlab && python branding/Logo-V2/scripts/build.py` from the repository root. The workflow also uploads a generated kit archive when triggered.
+The previously committed contents of `assets/vector/`, `mockups/`, `preview/`, and `samples/` contain reconstructed approximations and newly conceived mockups from the **prior** package. **They are not a pixel-exact copy of the approved owner reference and must not be passed off as the original Logo V2.** The new direction explicitly forbids redesign or tracing. Do not use or distribute those legacy sample assets as approved brand masters.
 
-**Status:** Digital-use sample kit; final print/master fidelity and artwork rights need review.
+The owner-supplied reference artwork and an exact-source ZIP with a Photoshop-compatible PSD, Illustrator-compatible SVG (raster embedded), OpenRaster editor document, owner-image crops, existing image mockup crops, PDF guidelines and minimal icon sample have been prepared separately. **Until its GitHub binary upload is verified, do not claim that ZIP is hosted or downloadable from this repository.**
+
+Converting a flattened JPEG to a PSD or wrapping it in an SVG does **not** recover editable Illustrator curves or enable infinite-detail zoom. Doing so would require the original creator's vector master or a new redraw, which the owner prohibited.
+
+The reference's visible `github.com/yourusername/...` URL and printed QR are part of the original board, **not verified distribution links**.
+
