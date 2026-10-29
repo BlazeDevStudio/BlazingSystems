@@ -43,6 +43,8 @@ BlazingSystems is a working portfolio of practical hardware and software project
 
 The full project ledger is in **[PROJECTS.md](PROJECTS.md)**. Validation boundaries are tracked in **[PORTFOLIO_VALIDATION.md](PORTFOLIO_VALIDATION.md)**.
 
+For dedicated application repositories, exact-source migration states and unresolved destinations, see **[Repository Allocation](REPOSITORY_ALLOCATION.md)**.
+
 ## Current Highlights
 
 - **BlazePwifi** — clean-room OpenWrt + ESP8266 captive-portal / vending architecture under active experimental validation.
